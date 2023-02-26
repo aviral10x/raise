@@ -31,8 +31,15 @@
 			"key": "2619878f0e2ff438d17835c2a4561cb87b4d24d72d12ec34569acd0dd4af7c21"
 		},
 		"testnet": {
-			"address": "9c692d972ed9a7fe",
-			"key": "1c6cdf91bd197489bc20b37401001cba6bbf8602f391d20cdb68d840b4809879"
+			"address": "0xb43dc6148d9ecbac",
+			"key": "2a1253a4ce4325e15e998477c5d81ce9b159845a4cc79a027ceacac475cb0be2"
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"testnet": [
+				"Grants"
+			]
 		}
 	}
 }

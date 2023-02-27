@@ -33,21 +33,24 @@ export default function Home() {
       <Navbar />
 
       <main className={styles.main}>
-        <h1>All Registered Grants</h1>
+        <div className='mx-2 my-4 text-3xl text-white font-bold'>
+        <h1>All Registered Grants : </h1></div>
 
         <div className={styles.grantsContainer}>
         {grantInfos.length === 0 ? (
+        <div className='mx-2 my-4 text-3xl text-white font-bold'>
               <p>You have not registered any FNS Grants yet</p>
+              </div>
             ) : (
 
               
-              <div className="grid grid-cols-4 gap-8" >
+              <div className="grid grid-cols-4 gap-8 my-6 mx-2" >
              { grantInfos.map((di, idx) => (
              
         
         
             <div
-              className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700" key={idx}>
+              className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-800" key={idx}>
               <a href="#!" data-te-ripple-init data-te-ripple-color="light">
                 <img
                   className="rounded-t-lg"
@@ -59,10 +62,10 @@ export default function Home() {
                   className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                 {di.name}
                 </h5>
-                <p className="mb-1 text-base text-neutral-600 dark:text-neutral-200">
+                <p className="mb-1 text-base text-neutral-600 dark:text-neutral-100">
                   By {di.owner}
                 </p>
-                <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                <p className="mb-4 text-base text-neutral-600 dark:text-neutral-100">
                   {di.bio.slice(0,64)}...
                 </p>
                 {/* <div className='flex flex-col pb-2'>

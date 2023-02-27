@@ -139,8 +139,13 @@ export default function Purchase() {
 
       {!isInitialized ? (
         <>
-          <p>Your account has not been initialized yet</p>
-          <button onClick={initialize}>Initialize Account</button>
+         <div className='mx-6 my-4 text-2xl text-white'>
+            <p>Account not logged in! </p></div>
+            <div className ='flex justify-center mx-2 my-4'>
+        <div className='px-6 rounded-lg text-2xl text-white bg-blue-600 font-bold my-2'>
+            <button onClick={initialize}>Login Account</button>
+            </div>
+            </div>
         </>
       ) : (
         <main className={styles.main}>

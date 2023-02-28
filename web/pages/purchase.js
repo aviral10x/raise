@@ -139,7 +139,7 @@ export default function Purchase() {
 
       {!isInitialized ? (
         <>
-         <div className='mx-6 my-4 text-2xl text-white'>
+         <div className='mx-6 my-4 text-xl text-white'>
             <p>Account not logged in! </p></div>
             <div className ='flex justify-center mx-2 my-4'>
         <div className='px-6 rounded-lg text-2xl text-white bg-blue-600 font-bold my-2'>
@@ -148,6 +148,10 @@ export default function Purchase() {
             </div>
         </>
       ) : (
+        <>
+        <div className=' flex justify-center my-24'>
+          <div className=' rounded-md bg-gray-900 '>
+            <div className='my-4'>
         <main className={styles.main}>
           <div className={styles.inputGroup}>
             <span>Name: </span>
@@ -201,6 +205,10 @@ export default function Purchase() {
           <p>Cost: {cost} FLOW</p>
           <p>{loading ? "Loading..." : null}</p>
         </main>
+        </div>
+        </div>
+        </div>
+        </>
       )}
     </div>
   );

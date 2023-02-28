@@ -145,7 +145,7 @@ export default function Home() {
         
         
             <div
-              className="block max-w-sm rounded-lg bg-code-100 text-white font-mono" key={idx}>
+              className="block max-w-sm rounded-lg bg-gray-900 text-white font-mono" key={idx}>
               <a href="#!" data-te-ripple-init data-te-ripple-color="light">
                 <img
                   className="rounded-t-lg"

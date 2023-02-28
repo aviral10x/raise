@@ -96,7 +96,7 @@ setBal(balance);
         
         
             <div
-              className="block max-w-sm rounded-sm bg-code-100 text-white font-mono my-8 mx-4 hover:bg-green-600" key={idx}>
+              className="block max-w-sm rounded-sm bg-gray-900 text-white font-mono my-8 mx-4 hover:bg-green-600" key={idx}>
               <a href="#!" data-te-ripple-init data-te-ripple-color="light">
                 <img
                   className="rounded-t-lg"

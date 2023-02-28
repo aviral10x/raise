@@ -167,33 +167,15 @@ export default function ManageGrant() {
 
       <Navbar />
 
-      <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3 mx-20 my-6'>
-              <div className='flex justify-between'>
-                <h1 className='text-lg font-semibold text-gray-100 mb-2'>Transfer Tokens</h1>
-                <img src='/planee.png' alt='plane' />
-              </div>
-              <div className='flex flex-col'>
-                <label className='text-sm text-white'>Address</label>
-                <input type="text" placeholder="Vitalik.eth"
-                  className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg'
-                  onChange={e => setRecipient(e.target.value)} />
-              </div>
-              <div className='flex flex-col pb-2'>
-                <label className='text-sm text-white'>Amount</label>
-                <input type="text" placeholder="Amount $"
-                  className='px-4 py-2 focus:outline-none  bg-gray-800 r rounded-lg'
-                  onChange={e => setAmount(e.target.value)} />
-              </div>
-              <button onClick={() => transferTokens(amount, recipient)}
-                className='rounded-lg text-center text-sm font-bold text-white py-2 bg-green-600 hover:bg-green-400'
-              >Transfer</button>
+            <div className='my-6 mx-20 text-2xl text-white font-semibold font-mono'>
+              Project Details :
             </div>
 
       <main className={styles.main}>
-        <div>
+        <div className='mx-4 my-4 text-xl font-mono text-white'>
           <h1>{grantInfo.name}</h1>
-          <p>ID: {grantInfo.id}</p>
-          <p>Owner: {grantInfo.owner}</p>
+          <p className='text-xl font-semibold'>ID: {grantInfo.id}</p>
+          <p>Owner             : {grantInfo.owner}</p>
           <p>
             Created At:{" "}
             {new Date(
@@ -206,18 +188,19 @@ export default function ManageGrant() {
               parseInt(grantInfo.expiresAt) * 1000
             ).toLocaleDateString()}
           </p>
-          <hr />
-          <p>Bio: {grantInfo.bio ? grantInfo.bio : "Not Set"}</p>
+          <hr className=' my-6 mx-2'/>
+          <p> {grantInfo.bio ? grantInfo.bio : "Not Set"}</p>
           <p>Address: {grantInfo.address ? grantInfo.address : "Not Set"}</p>
         </div>
 
         <div>
-          <h1>Update</h1>
-          <div className={styles.inputGroup}>
-            <span>Update Bio: </span>
+          <div className='text-2xl font-semibold  mx-24 my-4'>Update</div>
+          <div className='my-2'>
+          <div className={styles.inputGroup} >
+            <span className='text-xl font-mono'>Bio: </span>
             <input
               type="text"
-              placeholder="Lorem ipsum..."
+              placeholder=" Text"
               value={bio}
               onChange={(e) => setBio(e.target.value)}
             />
@@ -225,11 +208,12 @@ export default function ManageGrant() {
               Update
             </button>
           </div>
+          </div>
           <div className={styles.inputGroup}>
-            <span>Update ImgUrl: </span>
+            <span className='text-xl font-mono'>Logo: </span>
             <input
               type="text"
-              placeholder="Lorem ipsum..."
+              placeholder=" Image URL "
               value={imgurl}
               onChange={(e) => setImgUrl(e.target.value)}
             />
@@ -277,8 +261,31 @@ export default function ManageGrant() {
           </div>
           <p>Cost: {cost} FLOW</p>
           {loading && <p>Loading...</p>} */}
+
         </div>
       </main>
+      
+      <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3 mx-20 my-8'>
+              <div className='flex justify-center'>
+                <h1 className='text-xl font-semibold text-gray-100 mb-2 fonr-mono'>Transfer Tokens</h1>
+                {/* <img src='/planee.png' alt='plane' /> */}
+              </div>
+              <div className='flex flex-col'>
+                <label className='text-sm text-white'>Address</label>
+                <input type="text" placeholder="Vitalik.eth"
+                  className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg'
+                  onChange={e => setRecipient(e.target.value)} />
+              </div>
+              <div className='flex flex-col pb-2'>
+                <label className='text-sm text-white'>Amount</label>
+                <input type="text" placeholder="Amount $"
+                  className='px-4 py-2 focus:outline-none  bg-gray-800 r rounded-lg'
+                  onChange={e => setAmount(e.target.value)} />
+              </div>
+              <button onClick={() => transferTokens(amount, recipient)}
+                className='rounded-lg text-center text-sm font-bold text-white py-2 bg-green-600 hover:bg-green-400'
+              >Transfer</button>
+            </div>
     </div>
   );
 }

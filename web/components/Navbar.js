@@ -17,19 +17,19 @@ export default function Navbar() {
       {/* <input className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400" type="text" placeholder="🔍 Search projects" /> */}
 {/* </div> */}
 
-<div className='ease-in-out delay-50 hover:-translate-y-1 text-md font-semibold font-mono '>
+<div className='hover:text-white delay-50  text-md font-semibold font-mono '>
       <Link href="/">Home</Link></div>
-<div className='ease-in-out delay-50 hover:-translate-y-1 text-md font-semibold font-mono'>
+<div className='hover:text-white delay-50  text-md font-semibold font-mono'>
 
       <Link href="/purchase">Create Grant</Link></div>
-<div className='ease-in-out delay-50 hover:-translate-y-1 text-md font-semibold font-mono'>
+<div className='hover:text-white delay-50  text-md font-semibold font-mono'>
 
       <Link href="/manage">Manage</Link></div>
-<div className='ease-in-out delay-50 hover:-translate-y-1 text-md font-semibold font-mono '>
+<div className='hover:text-white delay-50 text-md font-semibold font-mono '>
 
       <Link href="/fund">Fund</Link></div>
       {/* <div className=' mx-2 my-2 '> */}
-<div className='ease-in-out delay-50 hover:-translate-y-1 text-md font-semibold bg-green-400 text-black rounded-lg px-3 font-mono' >
+<div className='hover:text-white delay-50  text-md font-semibold bg-green-400 text-black rounded-lg px-3 font-mono' >
       <button onClick={currentUser.addr ? logOut : logIn}>
         {currentUser.addr ? `${currentUser.addr}` : "Login"}
       </button></div>

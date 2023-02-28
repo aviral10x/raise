@@ -154,23 +154,23 @@ export default function Purchase() {
             <div className='my-4'>
         <main className={styles.main}>
           <div className={styles.inputGroup}>
-            <span>Name: </span>
+            <span className=' text-md font-mono mx-4'>Name: </span>
             <div className='flex'>
             <input
-            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400 mx-4"
+            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400 "
               type="text"
               value={name}
-              placeholder="  Learnweb3"
+              placeholder="  Learn web 3"
               onChange={(e) => setName(e.target.value)}
             /></div>
             {/* <span>.fns</span> */}
           </div>
           <div className={styles.inputGroup}>
-            <span>Select Categories: </span>
+            <span className='' > Categories: </span>
             <input
-            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400 mx-4"
+            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400  "
               list="categories"
-              placeholder="Categories"
+              placeholder=" Select"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             //   multiple

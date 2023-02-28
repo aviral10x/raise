@@ -167,26 +167,26 @@ export default function ManageGrant() {
 
       <Navbar />
 
-      <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3'>
+      <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3 mx-20 my-6'>
               <div className='flex justify-between'>
                 <h1 className='text-lg font-semibold text-gray-100 mb-2'>Transfer Tokens</h1>
                 <img src='/planee.png' alt='plane' />
               </div>
               <div className='flex flex-col'>
-                <label className='text-sm text-[#38E8C6]'>address</label>
-                <input type="text" placeholder="recipient address"
-                  className='px-4 py-2 focus:outline-none focus:border-[#38E8C6] focus:border-2 bg-gray-800 focus:border rounded-lg'
+                <label className='text-sm text-white'>Address</label>
+                <input type="text" placeholder="Vitalik.eth"
+                  className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg'
                   onChange={e => setRecipient(e.target.value)} />
               </div>
               <div className='flex flex-col pb-2'>
-                <label className='text-sm text-[#38E8C6]'>amount</label>
-                <input type="text" placeholder="amount"
-                  className='px-4 py-2 focus:outline-none focus:border-[#38E8C6] focus:border-2 bg-gray-800 focus:border rounded-lg'
+                <label className='text-sm text-white'>Amount</label>
+                <input type="text" placeholder="Amount $"
+                  className='px-4 py-2 focus:outline-none  bg-gray-800 r rounded-lg'
                   onChange={e => setAmount(e.target.value)} />
               </div>
               <button onClick={() => transferTokens(amount, recipient)}
-                className='rounded-lg text-center text-sm font-bold text-blue-900 py-2 bg-[#38E8C6]'
-              >Transfer Tokens</button>
+                className='rounded-lg text-center text-sm font-bold text-white py-2 bg-green-600 hover:bg-green-400'
+              >Transfer</button>
             </div>
 
       <main className={styles.main}>

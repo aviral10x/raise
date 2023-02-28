@@ -7,7 +7,7 @@ import { getAllGrantInfos } from "../flow/scripts";
 import styles from "../styles/Home.module.css";
 import b from'../public/b.jpg'
 import m from'../public/m.png'
-
+import Footer from '../components/Footer'
 
 export default function Home() {
   // Create a state variable for all the GrantInfo structs
@@ -118,6 +118,7 @@ height="400"/>
             )}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -177,41 +177,28 @@ export default function ManageGrant() {
 <div className=' rounded-xl mx-20 my-6'>
         <img src={grantInfo.imgurl}/>
 </div></div>
-
-        <div className='mx-20 my-8 text-xl  text-white'>
 <main className={styles.main}>
-          <div className='text-xl font-bold'>{grantInfo.name}</div>
+
+
+<div className='mx-4'>
+        <div className=' my-8 text-xl  text-white'>
+          <div className='text-2xl font-bold my-2'>{grantInfo.name}</div>
           {/* <p className='text-xl font-semibold'>ID: {grantInfo.id}</p> */}
           <div className='flex flex-col'>
-          <label className='text-white font-bold text-2xl'>FOUNDER</label>
-          <p> {grantInfo.owner}</p>
+          <label className='text-white font-bold text-xl my-2'>FOUNDER</label>
+          <div className='text-xl'> {grantInfo.owner}</div>
           </div>
-          </main>
-                    {/* <p>
-            Created At:{" "}
-            {new Date(
-              parseInt(grantInfo.createdAt) * 1000
-            ).toLocaleDateString()}
-          </p> */}
-          {/* <p>
-            Expires At:{" "}
-            {new Date(
-              parseInt(grantInfo.expiresAt) * 1000
-            ).toLocaleDateString()}
-          </p> */}
           <hr className=' my-6 mx-2'/>
           <p> {grantInfo.bio ? grantInfo.bio : "Not Set"}</p>
-          {/* <p>Address: {grantInfo.address ? grantInfo.address : "Not Set"}</p> */}
         </div>
-      {/* </main> */}
-      <main className={styles.main}>
-      
-      <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3 mx-20 my-8'>
+        </div>
+        <div>
+        <div className='flex bg-gray-900 rounded-lg shadow-lg px-4 py-6 flex-col space-y-5 w-1/2 mx-28 my-6 '>
               <div className='flex justify-center'>
-                <h1 className='text-xl font-semibold text-gray-100 mb-2 fonr-mono'>Transfer Tokens</h1>
+                <h1 className='text-xl font-semibold text-gray-100 mb-2 fonr-mono'>FUND</h1>
                 {/* <img src='/planee.png' alt='plane' /> */}
               </div>
-              <div className='flex flex-col'>
+              <div className='flex flex-col '>
                 <label className='text-sm text-white'>Address</label>
                 <input type="text" placeholder="Vitalik.eth"
                   className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg'
@@ -224,9 +211,14 @@ export default function ManageGrant() {
                   onChange={e => setAmount(e.target.value)} />
               </div>
               <button onClick={() => transferTokens(amount, recipient)}
-                className='rounded-lg text-center text-sm font-bold text-white py-2 bg-green-600 hover:bg-green-400'
+                className='rounded-lg text-center text-sm font-bold text-white py-2 px-16 mx-2 bg-green-600 hover:bg-green-400'
               >Transfer</button>
             </div>
+        </div>
+
+
+      </main>
+      {/* <main className={styles.main}>
 
             <div>
           <div className='text-2xl font-semibold  mx-24 my-4'>Update</div>
@@ -267,7 +259,7 @@ export default function ManageGrant() {
               onChange={(e) => setYears(e.target.value)}
             />
             <span>years</span>
-          </div> 
+          </div>  */}
           {/* <div className={styles.inputGroup}>
             <span>Update Address: </span>
             <input
@@ -297,8 +289,8 @@ export default function ManageGrant() {
           <p>Cost: {cost} FLOW</p>
           {loading && <p>Loading...</p>} */}
 
-        </div>
-        </main>
+        {/* </div>
+        </main> */}
     </div>
   );
 }

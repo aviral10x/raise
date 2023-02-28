@@ -204,7 +204,7 @@ export default function Purchase() {
             />
             <span>years</span>
           </div> */}
-                  <div className='inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-md font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out my-2 '>
+                  <div className='inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-md   text-white hover:bg-green-500 font-semibold '>
           <button onClick={purchase}>Create</button></div>
           <p>Cost: {cost} FLOW</p>
           <p>{loading ? "Loading..." : null}</p>

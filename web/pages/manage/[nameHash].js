@@ -261,7 +261,7 @@ export default function ManageGrant() {
               value={years}
               onChange={(e) => setYears(e.target.value)}
             />
-            <span>years</span>
+            <span className='text-xl font-mono mx-5'>Years</span>
           </div>
           </div>
           </div>

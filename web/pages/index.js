@@ -31,6 +31,25 @@ export default function Home() {
       </Head>
 
       <Navbar />
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <main className={styles.main}>
         <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
@@ -55,7 +74,8 @@ export default function Home() {
                 <img
                   className="rounded-t-lg"
                   src={di.imgurl}
-                  alt="" />
+                  alt=""
+                  width="300" height="200" />
               </a>
               <div className="p-6 ease-in-out delay-100 hover:-translate-y-1">
                 <h5

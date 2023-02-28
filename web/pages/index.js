@@ -38,8 +38,8 @@ export default function Home() {
 
         <div className={styles.grantsContainer}>
         {grantInfos.length === 0 ? (
-        <div className='mx-2 my-4 text-3xl text-white font-bold'>
-              <p>You have not registered any FNS Grants yet</p>
+      <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+      <p>You have not registered any FNS Grants yet</p>
               </div>
             ) : (
 

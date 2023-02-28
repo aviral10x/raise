@@ -67,9 +67,8 @@ setBal(balance);
       <button onClick={fetchBalance}>FetchBalance{bal ? bal :"bal"}</button>
       <main className={styles.main}>
 
-      <div className='mx-2 my-4 text-3xl text-white font-bold'>      
-        <h1>Your Registered Grants</h1>
-</div>
+      <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+        <h1> Registered Grants </h1></div>
 
         {!isInitialized ? (
           <>
@@ -84,7 +83,9 @@ setBal(balance);
         ) : (
           <div className={styles.grantsContainer}>
             {grantInfos.length === 0 ? (
-              <p>You have not registered any FNS Grants yet</p>
+      <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+            
+              <p>You have not registered any FNS Grants yet</p></div>
             ) : (
 
               

@@ -150,7 +150,7 @@ export default function Purchase() {
       ) : (
         <>
         <div className=' flex justify-center my-24'>
-          <div className=' rounded-md bg-gray-900 '>
+          <div className=' flex flex-col  rounded-md bg-gray-900 '>
             <div className='my-4'>
         <main className={styles.main}>
           <div className={styles.inputGroup}>

@@ -91,9 +91,8 @@ export default function Home() {
       <Navbar />
 
       <main className={styles.main}>
-      <div className='mx-2 my-4 text-3xl text-white font-bold'>      
-        <h1>Your Registered Grants</h1>
-</div>
+      <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+        <h1> Registered Grants </h1></div>
 
 
         {<>
@@ -173,7 +172,7 @@ export default function Home() {
                 </div>
 
                 <button type="button"
-                  className="inline-block rounded bg-blue-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] my-2 "
+                  className="inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out my-2 "
                   data-te-ripple-init
                   data-te-ripple-color="light" onClick={async () => {
                     const txId = await sendFlow(di.owner, amount);

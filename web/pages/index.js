@@ -33,8 +33,8 @@ export default function Home() {
       <Navbar />
 
       <main className={styles.main}>
-        <div className='mx-2 my-4 text-3xl text-white font-bold'>
-        <h1>All Registered Grants : </h1></div>
+        <div className='mx-2 my-4 text-2xl text-white font-semibold font-mono'>
+        <h1> Registered Grants </h1></div>
 
         <div className={styles.grantsContainer}>
         {grantInfos.length === 0 ? (

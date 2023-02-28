@@ -218,10 +218,9 @@ export default function ManageGrant() {
 
 
       </main>
-      {/* <main className={styles.main}>
-
-            <div>
-          <div className='text-2xl font-semibold  mx-24 my-4'>Update</div>
+           <div className =' flex justify-center'>
+            <div className=' bg-gray-900 text-white mx-4 my-4 px-4 rounded-lg w-1/3 py-4 '>
+          <div className='text-2xl font-semibold  mx-36 '>Edit ✏️</div>
           <div className='my-2'>
           <div className={styles.inputGroup} >
             <span className='text-xl font-mono'>Bio: </span>
@@ -259,7 +258,9 @@ export default function ManageGrant() {
               onChange={(e) => setYears(e.target.value)}
             />
             <span>years</span>
-          </div>  */}
+          </div>
+          </div>
+          </div>
           {/* <div className={styles.inputGroup}>
             <span>Update Address: </span>
             <input

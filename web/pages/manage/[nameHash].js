@@ -232,7 +232,7 @@ export default function ManageGrant() {
               value={bio}
               onChange={(e) => setBio(e.target.value)}
             />
-            <button onClick={updateBio} disabled={loading}>
+            <button onClick={updateBio} disabled={loading}  className='rounded-md outline outline-offset-1 outline-gray-600'>
               Update
             </button>
           </div>
@@ -246,7 +246,7 @@ export default function ManageGrant() {
               value={imgurl}
               onChange={(e) => setImgUrl(e.target.value)}
             />
-            <button onClick={updateImgUrl} disabled={loading}>
+            <button onClick={updateImgUrl} disabled={loading} className='rounded-md outline outline-offset-1 outline-gray-600 '>
               Update
             </button>
           </div>

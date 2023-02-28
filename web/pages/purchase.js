@@ -155,17 +155,20 @@ export default function Purchase() {
         <main className={styles.main}>
           <div className={styles.inputGroup}>
             <span>Name: </span>
+            <div className='flex'>
             <input
+            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400 mx-4"
               type="text"
               value={name}
-              placeholder="learnweb3"
+              placeholder="  Learnweb3"
               onChange={(e) => setName(e.target.value)}
-            />
+            /></div>
             {/* <span>.fns</span> */}
           </div>
           <div className={styles.inputGroup}>
             <span>Select Categories: </span>
             <input
+            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400 mx-4"
               list="categories"
               placeholder="Categories"
               value={category}
@@ -201,7 +204,8 @@ export default function Purchase() {
             />
             <span>years</span>
           </div> */}
-          <button onClick={purchase}>Create Grant</button>
+                  <div className='inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-md font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out my-2 '>
+          <button onClick={purchase}>Create</button></div>
           <p>Cost: {cost} FLOW</p>
           <p>{loading ? "Loading..." : null}</p>
         </main>

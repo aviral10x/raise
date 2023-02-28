@@ -57,7 +57,7 @@ export default function Home() {
                   src={di.imgurl}
                   alt="" />
               </a>
-              <div className="p-6">
+              <div className="p-6 ease-in-out delay-150 hover:-translate-y-1">
                 <h5
                   className="mb-2 text-xl  text-white font-semibold">
                 {di.name}

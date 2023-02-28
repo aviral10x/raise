@@ -149,9 +149,17 @@ export default function Purchase() {
         </>
       ) : (
         <>
-        <div className=' flex justify-center my-24'>
+                    {/* <div className='grid grid-cols-2'>
+                    <div className=' mx-20 my-10 text-3xl text-green-400 font-bold'>
+                      Create Your Own Grant</div> */}
+
+        <div className=' flex justify-center my-20'>
           <div className=' flex flex-col  rounded-md bg-gray-900 '>
             <div className='my-6'>
+              <div className='flex justify-center my-4'>
+              <div className='text-2xl font-mono font-bold text-green-400 '>
+                 Create Grant
+                 </div></div>
         <main className={styles.main}>
           <div className={styles.inputGroup}>
             <span className=' text-md font-mono mx-4 my-2'>Name: </span>
@@ -166,7 +174,7 @@ export default function Purchase() {
             {/* <span>.fns</span> */}
           </div>
           <div className={styles.inputGroup}>
-            <span className='' > Categories: </span>
+            <label className='text-sm' > Categories: </label>
             <input
             className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400  "
               list="categories"
@@ -206,7 +214,7 @@ export default function Purchase() {
           </div> */}
                   <div className='inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-md   text-white hover:bg-green-500 font-semibold '>
           <button onClick={purchase}>Create</button></div>
-          <p>Cost:{cost} FLOW</p>
+          {/* <p>Cost:{cost} FLOW</p> */}
           <p>{loading ? "Loading..." : null}</p>
         </main>
         </div>

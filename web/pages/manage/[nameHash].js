@@ -185,11 +185,11 @@ export default function ManageGrant() {
           <div className='text-2xl font-bold my-2'>{grantInfo.name}</div>
           {/* <p className='text-xl font-semibold'>ID: {grantInfo.id}</p> */}
           <div className='flex flex-col'>
-          <label className='text-white font-bold text-xl my-2'>FOUNDER</label>
-          <div className='text-xl'> {grantInfo.owner}</div>
+          <label className='text-white font-semibold text-xl my-2'>FOUNDER</label>
+          <div className='text-xl font-bold'> {grantInfo.owner}</div>
           </div>
           <hr className=' my-6 mx-2'/>
-          <p> {grantInfo.bio ? grantInfo.bio : "Not Set"}</p>
+          <div className='font-mono'> {grantInfo.bio ? grantInfo.bio : "Not Set"}</div>
         </div>
         </div>
         <div>
@@ -201,7 +201,7 @@ export default function ManageGrant() {
               <div className='flex flex-col '>
                 <label className='text-sm text-white'>Address</label>
                 <input type="text" placeholder="Vitalik.eth"
-                  className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg'
+                  className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg '
                   onChange={e => setRecipient(e.target.value)} />
               </div>
               <div className='flex flex-col pb-2'>
@@ -232,7 +232,7 @@ export default function ManageGrant() {
               value={bio}
               onChange={(e) => setBio(e.target.value)}
             />
-            <button onClick={updateBio} disabled={loading}  className='rounded-md outline outline-offset-1 outline-gray-600'>
+            <button onClick={updateBio} disabled={loading}  className='hover:bg-gray-800 rounded-md outline outline-offset-1 outline-gray-600'>
               Update
             </button>
           </div>
@@ -246,7 +246,7 @@ export default function ManageGrant() {
               value={imgurl}
               onChange={(e) => setImgUrl(e.target.value)}
             />
-            <button onClick={updateImgUrl} disabled={loading} className='rounded-md outline outline-offset-1 outline-gray-600 '>
+            <button onClick={updateImgUrl} disabled={loading} className='rounded-md outline outline-offset-1 outline-gray-600 hover:bg-gray-800'>
               Update
             </button>
           </div>

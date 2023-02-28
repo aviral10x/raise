@@ -218,6 +218,7 @@ export default function ManageGrant() {
 
 
       </main>
+      <hr className= 'mx-20 my-2'/>
            <div className =' flex justify-center'>
             <div className=' bg-gray-900 text-white mx-4 my-4 px-4 rounded-lg w-1/3 py-4 '>
           <div className='text-2xl font-semibold  mx-36 '>Edit ✏️</div>

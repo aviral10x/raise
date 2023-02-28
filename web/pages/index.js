@@ -50,7 +50,7 @@ export default function Home() {
         
         
             <div
-              className="block max-w-sm rounded-sm bg-gray-900 cursor-pointer font-mono text-white transition transform hover:scale-105" key={idx}>
+              className="block max-w-sm rounded-sm bg-gray-900 cursor-pointer font-mono text-white  hover:bg-green-600" key={idx}>
               <a href="#!" data-te-ripple-init data-te-ripple-color="light">
                 <img
                   className="rounded-t-lg"

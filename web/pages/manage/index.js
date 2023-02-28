@@ -72,7 +72,7 @@ setBal(balance);
 
         {!isInitialized ? (
           <>
-        <div className='mx-2 my-4 text-xl text-white'>
+        <div className='mx-2 my-4 text-xl text-white font-mono'>
             <p>Account not logged in! </p></div>
             <div className ='flex justify-center mx-2 my-4'>
         <div className='px-6 rounded-lg text-2xl text-white bg-blue-600 font-bold my-2'>
@@ -96,7 +96,7 @@ setBal(balance);
         
         
             <div
-              className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700" key={idx}>
+              className="block max-w-sm rounded-sm bg-gray-900 text-whiet font-mono my-8 mx-4" key={idx}>
               <a href="#!" data-te-ripple-init data-te-ripple-color="light">
                 <img
                   className="rounded-t-lg"

@@ -166,7 +166,7 @@ export default function Home() {
                 </p>
                 <div className='flex flex-col pb-2'>
                  
-                  <input type="text" placeholder="Amount"
+                  <input type="text" placeholder="Amount$"
                     className='px-4 py-2 focus:outline-none focus:border-[#f6f9f8] focus:border-1 bg-gray-800 focus:border rounded-lg'
                     onChange={e => setAmount(e.target.value)} />
                 </div>

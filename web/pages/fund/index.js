@@ -164,20 +164,22 @@ export default function Home() {
                 <p className="mb-4 text-base text-neutral-800 dark:text-neutral-200">
                   {di.bio.slice(0,64)}...
                 </p>
+                <hr className='my-4 mx-2'/>
                 <div className='flex flex-col pb-2'>
                  
                   <input type="text" placeholder="Amount $"
-                    className='px-4 py-2 focus:outline-none focus:border-[#f6f9f8] focus:border-1 bg-gray-800 focus:border rounded-lg'
+                    className='px-4 py-2 focus:outline-none  bg-gray-800 rounded-lg'
                     onChange={e => setAmount(e.target.value)} />
                 </div>
+                <div className=' flex justify-center'>
 
                 <button type="button"
-                  className="inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out my-2 "
+                  className="inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-md font-semibold uppercase leading-normal text-white  transition duration-150 ease-in-out my-2 py-2 hover:bg-green-400"
                   data-te-ripple-init
                   data-te-ripple-color="light" onClick={async () => {
                     const txId = await sendFlow(di.owner, amount);
                     await fcl.tx(txId).onceSealed();
-                  }} >Fund </button>
+                  }} >Fund </button></div>
 
               </div>
             </div>

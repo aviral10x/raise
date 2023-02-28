@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { getAllGrantInfos } from "../flow/scripts";
 import styles from "../styles/Home.module.css";
+import b from'../public/b.jpg'
+import m from'../public/m.png'
+
 
 export default function Home() {
   // Create a state variable for all the GrantInfo structs
@@ -31,26 +34,30 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      
 
+  
 
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div className='grid grid-cols-2'>
+        <div className=' flex flex-col=-2'>
+      <div className ='my-20 mx-20 hover:transition-105'>
+<Image 
+src={b}
+alt=''
+width="400"
+height="200"/>
+</div>
+</div>
+<div className=' flex flex-col'>
+<div className ='my-24 mx-20'>
+<Image 
+src={m}
+alt=''
+width="350"
+height="400"/>
+</div>
+</div></div>
       <main className={styles.main}>
         <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
         <h1> Registered Grants </h1></div>

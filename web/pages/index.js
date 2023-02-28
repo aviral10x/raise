@@ -41,16 +41,16 @@ export default function Home() {
 
       <div className='grid grid-cols-2'>
         <div className=' flex flex-col=-2'>
-      <div className ='my-20 mx-20 hover:transition-105'>
+      <div className ='my-20 mx-20 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105'>
 <Image 
 src={b}
 alt=''
 width="400"
-height="200"/>
+height="400"/>
 </div>
 </div>
 <div className=' flex flex-col'>
-<div className ='my-24 mx-20'>
+<div className ='my-20 mx-20 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105'>
 <Image 
 src={m}
 alt=''

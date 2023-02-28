@@ -226,6 +226,7 @@ export default function ManageGrant() {
           <div className={styles.inputGroup} >
             <span className='text-xl font-mono'>Bio: </span>
             <input
+            className='bg-slate-800'
               type="text"
               placeholder=" Text"
               value={bio}
@@ -239,6 +240,7 @@ export default function ManageGrant() {
           <div className={styles.inputGroup}>
             <span className='text-xl font-mono'>Logo: </span>
             <input
+            className='bg-slate-800'
               type="text"
               placeholder=" Image URL "
               value={imgurl}
@@ -253,6 +255,7 @@ export default function ManageGrant() {
  <div className={styles.inputGroup}>
             <span>Fund: </span>
             <input
+            className='bg-slate-800'
               type="number"
               placeholder="1"
               value={years}

@@ -1,7 +1,7 @@
 ### 👋 Welcome to Raise!
 Raise is a platform to Support Public Goods and Open Source Projects in the Flow Ecosystem.
 
-###  SThe problem Raise solves
+###  The problem Raise solves
 
 - Generally, many innovative and creative projects with highly efficient ideas and structures fail to succeed and expand as their growth stops due to insufficient funds and resources. We have brought up a solution in the most efficient and Advanced Manner
 - Any Project/ Startup in need of funds and investment can easily list their project on our platform. We provide public exposure to those projects listed in our application.

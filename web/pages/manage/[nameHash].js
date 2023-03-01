@@ -4,6 +4,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import * as fcl from "@onflow/fcl";
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
+import Footer from "@/components/Footer";
 import { getGrantInfoByNameHash, getRentCost } from "../../flow/scripts";
 import styles from "../../styles/ManageGrant.module.css";
 import {
@@ -296,6 +297,7 @@ export default function ManageGrant() {
 
         {/* </div>
         </main> */}
+        <Footer/>
     </div>
   );
 }

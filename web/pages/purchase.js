@@ -12,6 +12,7 @@ import {
     updateBioForGrant,
   } from "../flow/transactions";
 import { useRouter } from "next/router";
+import Footer from '../components/Footer'
 
 
 // Maintain a constant for seconds per year
@@ -222,6 +223,7 @@ export default function Purchase() {
         </div>
         </>
       )}
+      <Footer/>
     </div>
   );
 }

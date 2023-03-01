@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
+import Footer from "@/components/Footer";
 import { useAuth } from "../../contexts/AuthContext";
 import { getMyGrantInfos } from "../../flow/scripts";
 import { initializeAccount } from "../../flow/transactions";
@@ -189,6 +190,7 @@ export default function Home() {
         </>
         }
       </main>
+      <Footer />
     </div>
   );
 }

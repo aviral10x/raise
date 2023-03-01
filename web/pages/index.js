@@ -7,6 +7,7 @@ import { getAllGrantInfos } from "../flow/scripts";
 import styles from "../styles/Home.module.css";
 import b from'../public/b.jpg'
 import m from'../public/m.png'
+import e from'../public/e.jpg'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -58,6 +59,14 @@ width="350"
 height="400"/>
 </div>
 </div></div>
+<div className ='my-20 mx-20'>
+<Image 
+src={e}
+alt=''
+width="1100"
+height="400"/>
+
+</div>
       <main className={styles.main}>
         <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
         <h1> Registered Grants </h1></div>

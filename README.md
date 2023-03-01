@@ -1,5 +1,5 @@
-### 👋 Welcome Flow Developer!
-Welcome to your new Flow project. We only provided you with bare minimum to get started, which is the standard Cadence folder structure and a flow.json configuration with standard contracts defined.
+### 👋 Welcome to Raise!
+Raise is a platform to Support Public Goods and Open Source Projects in the Flow Ecosystem.
 
 ### 🔨 Getting started
 Getting started can feel overwhelming, but we are here for you. Depending on how accustomed you are to Flow here's a list of resources you might find useful:
@@ -73,9 +73,13 @@ You can already import certain common contracts we included for you, just make s
 - NFTStorefrontV2 `import "NFTStorefrontV2"`
 - NFTStorefront `import "NFTStorefront"`
 
+### Sponsor tracks and prizes
+**Extending the Ecosystem**
+**Best app building on FlowNS**
+**Best Use Of Walletless Onboarding Track**
+**Best app using Niftory's NFT and Wallet APIs**
 
-### Further Reading
 
-- Cadence Language Reference https://developers.flow.com/cadence/language
-- Flow Smart Contract Project Development Standards https://developers.flow.com/cadence/style-guide/project-development-tips
-- Cadence anti-patterns https://developers.flow.com/cadence/anti-patterns
+- Best app using Niftory's NFT and Wallet APIs - https://github.com/aviral10x/raise/tree/main/niftory
+- Best app building on FlowNS - https://github.com/aviral10x/raise/blob/main/web/flow/scripts.js
+

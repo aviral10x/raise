@@ -15,7 +15,7 @@ export const navLinks = [
   },
   {
    
-    title: "Connect Wallet",
+    title: "Get Started",
   },
 ];
 

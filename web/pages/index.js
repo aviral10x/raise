@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { getAllGrantInfos ,getFlownsName} from "../flow/scripts";
 import styles from "../styles/Home.module.css";
+import b from'../public/b.jpg'
+import m from'../public/m.png'
+import e from'../public/e.jpg'
+import Footer from '../components/Footer'
 
 export default function Home() {
   // Create a state variable for all the GrantInfo structs
@@ -62,40 +66,72 @@ async function getFlowns(url){
 
       <Navbar />
 
+  
+
+        
+
+      <div className='grid grid-cols-2'>
+        <div className=' flex flex-col=-2'>
+      <div className ='my-20 mx-20 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105'>
+<Image 
+src={b}
+alt=''
+width="400"
+height="400"/>
+</div>
+</div>
+<div className=' flex flex-col'>
+<div className ='my-20 mx-20 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105'>
+<Image 
+src={m}
+alt=''
+width="350"
+height="400"/>
+</div>
+</div></div>
+<div className ='my-20 mx-20'>
+<Image 
+src={e}
+alt=''
+width="1100"
+height="400"/>
+
+</div>
       <main className={styles.main}>
-        <h1>All Registered Grants</h1>
+        <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+        <h1> Registered Grants </h1></div>
 
         <div className={styles.grantsContainer}>
         {grantInfos.length === 0 ? (
-              <p>You have not registered any FNS Grants yet</p>
+      <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+      <p>You have not registered any FNS Grants yet</p>
+              </div>
             ) : (
 
               
-              <div className="grid grid-cols-4 gap-8" >
+              <div className="grid grid-cols-4 gap-8 my-6 mx-2" >
              { grantInfos.map((di, idx) => (
              
               
         
             <div
-              className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700" key={idx}>
+              className="block max-w-sm rounded-sm bg-gray-900 cursor-pointer font-mono text-white  hover:bg-green-600" key={idx}>
               <a href="#!" data-te-ripple-init data-te-ripple-color="light">
                <img
                   className="rounded-t-lg "
                   src={di.imgurl}
-                  alt="" />
+                  alt=""
+                  width="300" height="200" />
               </a>
-              <div className="p-6">
+              <div className="p-6 ease-in-out delay-100 hover:-translate-y-1">
                 <h5
-                  className="mb-[2px] text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                  className="mb-2 text-xl  text-white font-semibold">
                 {di.name}
                 </h5>
-                <div className="mb-1 text-xs text-neutral-600 dark:text-neutral-200">
-                  By <p className="text-red-100" on={ async ()=>{ 
-const name = await getFlownsName(di.owner);
-setName(name);
-                  }} >{name}</p>
-                </div>
-                <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                <p className="mb-1 text-base text-neutral-600 dark:text-neutral-100">
+                  By {di.owner}
+                </p>
+                <p className="mb-4 text-base text-neutral-600 dark:text-neutral-100">
                   {di.bio.slice(0,64)}...
                 </p>
                 {/* <div className='flex flex-col pb-2'>
@@ -123,6 +159,7 @@ setName(name);
             )}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

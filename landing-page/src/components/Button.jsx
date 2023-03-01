@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({ styles }) => (
   <button type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}>
-    Get Started
+    <a href="https://raise-1.vercel.app/">Get Started</a>
   </button>
 );
 

@@ -4,6 +4,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import * as fcl from "@onflow/fcl";
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
+import Footer from "@/components/Footer";
 import { getGrantInfoByNameHash, getRentCost } from "../../flow/scripts";
 import styles from "../../styles/ManageGrant.module.css";
 import {
@@ -167,74 +168,86 @@ export default function ManageGrant() {
 
       <Navbar />
 
-      {/* <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3'>
-              <div className='flex justify-between'>
-                <h1 className='text-lg font-semibold text-gray-100 mb-2'>Transfer Tokens</h1>
-                <img src='/planee.png' alt='plane' />
+            {/* <div className='my-6 mx-20 text-2xl text-white font-semibold font-mono'>
+              Project Details :
+            </div> */}
+
+      {/* <main className={styles.main}> */}
+
+<div className='flex justify-center'>
+<div className=' rounded-xl mx-20 my-6'>
+        <img src={grantInfo.imgurl}/>
+</div></div>
+<main className={styles.main}>
+
+
+<div className='mx-4'>
+        <div className=' my-8 text-xl  text-white'>
+          <div className='text-2xl font-bold my-2'>{grantInfo.name}</div>
+          {/* <p className='text-xl font-semibold'>ID: {grantInfo.id}</p> */}
+          <div className='flex flex-col'>
+          <label className='text-white font-semibold text-xl my-2'>FOUNDER</label>
+          <div className='text-xl font-bold'> {grantInfo.owner}</div>
+          </div>
+          <hr className=' my-6 mx-2'/>
+          <div className='font-mono'> {grantInfo.bio ? grantInfo.bio : "Not Set"}</div>
+        </div>
+        </div>
+        <div>
+        <div className='flex bg-gray-900 rounded-lg shadow-lg px-4 py-6 flex-col space-y-5 w-1/2 mx-28 my-6 '>
+              <div className='flex justify-center'>
+                <h1 className='text-xl font-semibold text-gray-100 mb-2 fonr-mono'>FUND</h1>
+                {/* <img src='/planee.png' alt='plane' /> */}
               </div>
-              <div className='flex flex-col'>
-                <label className='text-sm text-[#38E8C6]'>address</label>
-                <input type="text" placeholder="recipient address"
-                  className='px-4 py-2 focus:outline-none focus:border-[#38E8C6] focus:border-2 bg-gray-800 focus:border rounded-lg'
+              <div className='flex flex-col '>
+                <label className='text-sm text-white'>Address</label>
+                <input type="text" placeholder="Vitalik.eth"
+                  className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg '
                   onChange={e => setRecipient(e.target.value)} />
               </div>
               <div className='flex flex-col pb-2'>
-                <label className='text-sm text-[#38E8C6]'>amount</label>
-                <input type="text" placeholder="amount"
-                  className='px-4 py-2 focus:outline-none focus:border-[#38E8C6] focus:border-2 bg-gray-800 focus:border rounded-lg'
+                <label className='text-sm text-white'>Amount</label>
+                <input type="text" placeholder="Amount $"
+                  className='px-4 py-2 focus:outline-none  bg-gray-800 r rounded-lg'
                   onChange={e => setAmount(e.target.value)} />
               </div>
               <button onClick={() => transferTokens(amount, recipient)}
-                className='rounded-lg text-center text-sm font-bold text-blue-900 py-2 bg-[#38E8C6]'
-              >Transfer Tokens</button>
-            </div> */}
-
-      <main className={styles.main}>
-        <div>
-          <h1>{grantInfo.name}</h1>
-          <img src={grantInfo.imgurl}/>
-          <p>ID: {grantInfo.id}</p>
-          <p>Owner: {grantInfo.owner}</p>
-          <p>
-            Created At:{" "}
-            {new Date(
-              parseInt(grantInfo.createdAt) * 1000
-            ).toLocaleDateString()}
-          </p>
-          <p>
-            Expires At:{" "}
-            {new Date(
-              parseInt(grantInfo.expiresAt) * 1000
-            ).toLocaleDateString()}
-          </p>
-          <hr />
-          <p>Bio: {grantInfo.bio ? grantInfo.bio : "Not Set"}</p>
-          <p>Address: {grantInfo.address ? grantInfo.address : "Not Set"}</p>
+                className='rounded-lg text-center text-sm font-bold text-white py-2 px-16 mx-2 bg-green-600 hover:bg-green-400'
+              >Transfer</button>
+            </div>
         </div>
 
-        <div>
-          <h1>Update</h1>
-          <div className={styles.inputGroup}>
-            <span>Update Bio: </span>
+
+      </main>
+      <hr className= 'mx-20 my-2'/>
+           <div className =' flex justify-center'>
+            <div className=' bg-gray-900 text-white mx-4 my-4 px-4 rounded-lg w-1/3 py-4 '>
+          <div className='text-2xl font-semibold  mx-36 '>Edit ✏️</div>
+          <div className='my-2'>
+          <div className={styles.inputGroup} >
+            <span className='text-xl font-mono'>Bio: </span>
             <input
+            className='bg-slate-800'
               type="text"
-              placeholder="Lorem ipsum..."
+              placeholder=" Text"
               value={bio}
               onChange={(e) => setBio(e.target.value)}
             />
-            <button onClick={updateBio} disabled={loading}>
+            <button onClick={updateBio} disabled={loading}  className='hover:bg-gray-800 rounded-md outline outline-offset-1 outline-gray-600'>
               Update
             </button>
           </div>
+          </div>
           <div className={styles.inputGroup}>
-            <span>Update ImgUrl: </span>
+            <span className='text-xl font-mono'>Logo: </span>
             <input
+            className='bg-slate-800'
               type="text"
-              placeholder="Lorem ipsum..."
+              placeholder=" Image URL "
               value={imgurl}
               onChange={(e) => setImgUrl(e.target.value)}
             />
-            <button onClick={updateImgUrl} disabled={loading}>
+            <button onClick={updateImgUrl} disabled={loading} className='rounded-md outline outline-offset-1 outline-gray-600 hover:bg-gray-800'>
               Update
             </button>
           </div>
@@ -243,13 +256,16 @@ export default function ManageGrant() {
  <div className={styles.inputGroup}>
             <span>Fund: </span>
             <input
+            className='bg-slate-800'
               type="number"
               placeholder="1"
               value={years}
               onChange={(e) => setYears(e.target.value)}
             />
-            <span>years</span>
-          </div> 
+            <span className='text-xl font-mono mx-5'>Years</span>
+          </div>
+          </div>
+          </div>
           {/* <div className={styles.inputGroup}>
             <span>Update Address: </span>
             <input
@@ -278,8 +294,10 @@ export default function ManageGrant() {
           </div>
           <p>Cost: {cost} FLOW</p>
           {loading && <p>Loading...</p>} */}
-        </div>
-      </main>
+
+        {/* </div>
+        </main> */}
+        <Footer/>
     </div>
   );
 }

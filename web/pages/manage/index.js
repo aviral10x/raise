@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import Navbar from "../../components/Navbar";
+import Footer from "@/components/Footer";
 import {useAuth} from "../../contexts/AuthContext";
 import {getMyGrantInfos,getFlowBalance, getFlownsName} from "../../flow/scripts";
 import {initializeAccount} from "../../flow/transactions";
@@ -79,17 +80,26 @@ setName(name);
       <button onClick={fetchName}>FetchName{name ? name :"name"}</button>
 
       <main className={styles.main}>
-        <h1>Your Registered Grants</h1>
+
+      <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+        <h1> Registered Grants </h1></div>
 
         {!isInitialized ? (
           <>
-            <p>Your account has not been initialized yet</p>
-            <button onClick={initialize}>Initialize Account</button>
+        <div className='mx-2 my-4 text-xl text-white font-mono'>
+            <p>Account not Initialized ! </p></div>
+            <div className ='flex justify-center mx-2 my-4'>
+        <div className='px-6 rounded-lg text-2xl text-white bg-blue-600 font-bold my-2'>
+            <button onClick={initialize}> Initialize Account</button>
+            </div>
+            </div>
           </>
         ) : (
           <div className={styles.grantsContainer}>
             {grantInfos.length === 0 ? (
-              <p>You have not registered any FNS Grants yet</p>
+      <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
+            
+              <p>You have not registered any FNS Grants yet</p></div>
             ) : (
 
               
@@ -100,14 +110,15 @@ setName(name);
         
         
             <div
-              className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700" key={idx}>
+              className="block max-w-sm rounded-sm bg-gray-900 text-white font-mono my-8 mx-4 hover:bg-green-600" key={idx}>
+              {/* <a href="#!" data-te-ripple-init data-te-ripple-color="light"> */}
                 <img
                   className="rounded-t-lg"
                   src={di.imgurl}
                   alt="" />
               <div className="p-6">
                 <h5
-                  className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                  className="mb-2 text-xl  leading-tight text-neutral-800 dark:text-neutral-50 font-semibold">
                 {di.name}
                 </h5>
                 <p className="mb-1 text-base text-neutral-600 dark:text-neutral-200">
@@ -141,6 +152,7 @@ setName(name);
           </div>
         )}
       </main>
+      <Footer/>
     </div>
   );
 }

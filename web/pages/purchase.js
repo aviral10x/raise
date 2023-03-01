@@ -12,6 +12,7 @@ import {
     updateBioForGrant,
   } from "../flow/transactions";
 import { useRouter } from "next/router";
+import Footer from '../components/Footer'
 
 
 // Maintain a constant for seconds per year
@@ -139,27 +140,46 @@ export default function Purchase() {
 
       {!isInitialized ? (
         <>
-          <p>Your account has not been initialized yet</p>
-          <button onClick={initialize}>Initialize Account</button>
+         <div className='mx-6 my-4 text-xl text-white'>
+            <p>Account not Initialized ! </p></div>
+            <div className ='flex justify-center mx-2 my-4'>
+        <div className='px-6 rounded-lg text-2xl text-white bg-blue-600 font-bold my-2'>
+            <button onClick={initialize}> Initialize Account</button>
+            </div>
+            </div>
         </>
       ) : (
+        <>
+                    {/* <div className='grid grid-cols-2'>
+                    <div className=' mx-20 my-10 text-3xl text-green-400 font-bold'>
+                      Create Your Own Grant</div> */}
+
+        <div className=' flex justify-center my-20'>
+          <div className=' flex flex-col  rounded-md bg-gray-900 '>
+            <div className='my-6'>
+              <div className='flex justify-center my-4'>
+              <div className='text-2xl font-mono font-bold text-green-400 '>
+                 Create Grant
+                 </div></div>
         <main className={styles.main}>
           <div className={styles.inputGroup}>
-            <span>Name: </span>
+            <span className=' text-md font-mono mx-4 my-2'>Name: </span>
+            <div className='flex'>
             <input
+            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400 "
               type="text"
               value={name}
-              placeholder="learnweb3"
               placeholder="Grant Name"
               onChange={(e) => setName(e.target.value)}
-            />
+            /></div>
             {/* <span>.fns</span> */}
           </div>
           <div className={styles.inputGroup}>
-            <span>Select Categories: </span>
+            <label className='text-sm' > Categories: </label>
             <input
+            className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400  "
               list="categories"
-              placeholder="Categories"
+              placeholder=" Select"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             //   multiple
@@ -193,11 +213,17 @@ export default function Purchase() {
             />
             <span>years</span>
           </div> */}
-          <button onClick={purchase}>Create Grant</button>
-          <p>Cost: {cost} FLOW</p>
+                  <div className='inline-block rounded bg-green-600 px-6 pt-2.5 pb-2 text-md   text-white hover:bg-green-500 font-semibold '>
+          <button onClick={purchase}>Create</button></div>
+          {/* <p>Cost:{cost} FLOW</p> */}
           <p>{loading ? "Loading..." : null}</p>
         </main>
+        </div>
+        </div>
+        </div>
+        </>
       )}
+      <Footer/>
     </div>
   );
 }

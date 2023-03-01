@@ -200,10 +200,10 @@ export default function ManageGrant() {
                 {/* <img src='/planee.png' alt='plane' /> */}
               </div>
               <div className='flex flex-col '>
-                <label className='text-sm text-white'>Address</label>
+                {/* <label className='text-sm text-white'>Address</label>
                 <input type="text" placeholder="Vitalik.eth"
                   className='px-4 py-2 focus:outline-none   bg-gray-800  rounded-lg '
-                  onChange={e => setRecipient(e.target.value)} />
+                  onChange={e => setRecipient(e.target.value)} /> */}
               </div>
               <div className='flex flex-col pb-2'>
                 <label className='text-sm text-white'>Amount</label>
@@ -253,7 +253,7 @@ export default function ManageGrant() {
           </div>
           <br />
 
- <div className={styles.inputGroup}>
+ {/* <div className={styles.inputGroup}>
             <span>Fund: </span>
             <input
             className='bg-slate-800'
@@ -263,7 +263,7 @@ export default function ManageGrant() {
               onChange={(e) => setYears(e.target.value)}
             />
             <span className='text-xl font-mono mx-5'>Years</span>
-          </div>
+          </div> */}
           </div>
           </div>
           {/* <div className={styles.inputGroup}>

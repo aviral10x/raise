@@ -74,10 +74,10 @@ setBal(balance);
         {!isInitialized ? (
           <>
         <div className='mx-2 my-4 text-xl text-white font-mono'>
-            <p>Account not logged in! </p></div>
+            <p>Account not Initialized ! </p></div>
             <div className ='flex justify-center mx-2 my-4'>
         <div className='px-6 rounded-lg text-2xl text-white bg-blue-600 font-bold my-2'>
-            <button onClick={initialize}>Login Account</button>
+            <button onClick={initialize}> Initialize Account</button>
             </div>
             </div>
           </>

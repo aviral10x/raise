@@ -38,6 +38,7 @@ We've used FlowNS script to showcase the FlowNS Domain names owned by the users 
 
 
 **Best Use Of Walletless Onboarding Track**
+
 We've used Niftory's Wallet API to help onboard tons of users from the Web2 space and allow them to fund grants in our platform and also to create grants and get their projects funded.
 
 
@@ -45,5 +46,4 @@ We've used Niftory's Wallet API to help onboard tons of users from the Web2 spac
 
 
 - Best app using Niftory's NFT and Wallet APIs - https://github.com/aviral10x/raise/tree/main/niftory
-- Best app building on FlowNS
 

@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import { getAllGrantInfos } from "../flow/scripts";
+import { getAllGrantInfos ,getFlownsName} from "../flow/scripts";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   // Create a state variable for all the GrantInfo structs
   // Initialize it to an empty array
   const [grantInfos, setGrantInfos] = useState([]);
+  const [name,setName]= useState([]);
 
   // Load all the GrantInfo's by running the Cadence script
   // when the page is loaded
@@ -17,10 +18,39 @@ export default function Home() {
     async function fetchGrants() {
       const grants = await getAllGrantInfos();
       setGrantInfos(grants);
+    
     }
 
+      // async function getFlowns(url){
+      //   const response = await fetch(url);
+      //   var data = await response.json();
+      //   setName(data.name);
+    // }
+
     fetchGrants();
+    // getFlowns();
   }, []);
+
+  // const url = "https://testnet.flowns.org/api/data/address/0xdd5d71a9c7f9e565";
+
+
+
+// useEffect(()=> {
+//   async function getFlowns(url){
+//     const response = await fetch(url);
+//     var data = await response.json();
+//     setName(data.name);
+//     console.log(data)
+//     }
+//     getFlowns();
+// },[])
+
+async function getFlowns(url){
+  const response = await fetch(url);
+  var data = await response.json();
+  setName(data.name);
+  console.log(data)}
+
 
   return (
     <div className={styles.container}>
@@ -44,24 +74,27 @@ export default function Home() {
               <div className="grid grid-cols-4 gap-8" >
              { grantInfos.map((di, idx) => (
              
-        
+              
         
             <div
               className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700" key={idx}>
               <a href="#!" data-te-ripple-init data-te-ripple-color="light">
-                <img
-                  className="rounded-t-lg"
+               <img
+                  className="rounded-t-lg "
                   src={di.imgurl}
                   alt="" />
               </a>
               <div className="p-6">
                 <h5
-                  className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                  className="mb-[2px] text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                 {di.name}
                 </h5>
-                <p className="mb-1 text-base text-neutral-600 dark:text-neutral-200">
-                  By {di.owner}
-                </p>
+                <div className="mb-1 text-xs text-neutral-600 dark:text-neutral-200">
+                  By <p className="text-red-100" on={ async ()=>{ 
+const name = await getFlownsName(di.owner);
+setName(name);
+                  }} >{name}</p>
+                </div>
                 <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
                   {di.bio.slice(0,64)}...
                 </p>
@@ -81,6 +114,8 @@ export default function Home() {
                   }} >Fund </button> */}
 
               </div>
+              <button onClick={getFlowns}>check</button>
+
             </div>
         
               ))}

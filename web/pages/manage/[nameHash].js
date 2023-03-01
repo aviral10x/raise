@@ -167,7 +167,7 @@ export default function ManageGrant() {
 
       <Navbar />
 
-      <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3'>
+      {/* <div className='flex bg-gray-900 rounded-lg shadow-lg px-5 py-7 flex-col space-y-5 w-1/3'>
               <div className='flex justify-between'>
                 <h1 className='text-lg font-semibold text-gray-100 mb-2'>Transfer Tokens</h1>
                 <img src='/planee.png' alt='plane' />
@@ -187,11 +187,12 @@ export default function ManageGrant() {
               <button onClick={() => transferTokens(amount, recipient)}
                 className='rounded-lg text-center text-sm font-bold text-blue-900 py-2 bg-[#38E8C6]'
               >Transfer Tokens</button>
-            </div>
+            </div> */}
 
       <main className={styles.main}>
         <div>
           <h1>{grantInfo.name}</h1>
+          <img src={grantInfo.imgurl}/>
           <p>ID: {grantInfo.id}</p>
           <p>Owner: {grantInfo.owner}</p>
           <p>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 import Navbar from "../../components/Navbar";
 import {useAuth} from "../../contexts/AuthContext";
-import {getMyGrantInfos,getFlowBalance} from "../../flow/scripts";
+import {getMyGrantInfos,getFlowBalance, getFlownsName} from "../../flow/scripts";
 import {initializeAccount} from "../../flow/transactions";
 import styles from "../../styles/Manage.module.css";
 
@@ -13,6 +13,8 @@ export default function Home() {
   const { currentUser, isInitialized, checkInit } = useAuth();
   const [grantInfos, setGrantInfos] = useState([]);
   const [bal, setBal] = useState("");
+  const [name, setName] = useState("");
+
 
 
   // Function to initialize the user's account if not already initialized
@@ -45,6 +47,15 @@ setBal(balance);
     }
   }
 
+  async function fetchName() {
+    try {
+      const name = await getFlownsName(currentUser.addr);
+setName(name);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
 
   // Load user-owned grants if they are initialized
   // Run if value of `isInitialized` changes
@@ -65,6 +76,8 @@ setBal(balance);
 
       <Navbar />
       <button onClick={fetchBalance}>FetchBalance{bal ? bal :"bal"}</button>
+      <button onClick={fetchName}>FetchName{name ? name :"name"}</button>
+
       <main className={styles.main}>
         <h1>Your Registered Grants</h1>
 
@@ -88,12 +101,10 @@ setBal(balance);
         
             <div
               className="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700" key={idx}>
-              <a href="#!" data-te-ripple-init data-te-ripple-color="light">
                 <img
                   className="rounded-t-lg"
                   src={di.imgurl}
                   alt="" />
-              </a>
               <div className="p-6">
                 <h5
                   className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">

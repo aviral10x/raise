@@ -150,6 +150,7 @@ export default function Purchase() {
               type="text"
               value={name}
               placeholder="learnweb3"
+              placeholder="Grant Name"
               onChange={(e) => setName(e.target.value)}
             />
             {/* <span>.fns</span> */}

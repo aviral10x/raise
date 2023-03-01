@@ -165,3 +165,40 @@ export async function getFlowBalance(addr) {
 
     return vaultRef.balance
   }`
+
+  export async function getFlownsName(addr) {
+    return fcl.query({
+      cadence :GET_FLOWNS_NAME,
+      args: (arg, t) => [arg(addr, t.Address)],
+     
+    });
+  }
+
+  const GET_FLOWNS_NAME=`
+  import Flowns from 0xFlowns
+  import Domains from 0xFlowns
+  
+   pub fun main(address: Address): String? {
+        
+      let account = getAccount(address)
+      let collectionCap = account.getCapability<&{Domains.CollectionPublic}>(Domains.CollectionPublicPath) 
+    
+      if collectionCap.check() != true {
+        return nil
+      }
+    
+      var flownsName = ""
+      let collection = collectionCap.borrow()!
+      let ids = collection.getIDs()
+      flownsName = collection.borrowDomain(id: ids[0])!.getDomainName()
+      for id in ids {
+        let domain = collection.borrowDomain(id: id)!
+        let isDefault = domain.getText(key: "isDefault")
+        if isDefault == "true" {
+          flownsName = domain.getDomainName()
+          break
+        }
+      }
+    
+      return flownsName
+    }`

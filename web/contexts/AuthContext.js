@@ -1,6 +1,7 @@
 import * as fcl from "@onflow/fcl";
 import { createContext, useContext, useEffect, useState } from "react";
 import { checkIsInitialized, IS_INITIALIZED } from "../flow/scripts";
+// import {getAddress} from "../components/Navbar"
 
 export const AuthContext = createContext({});
 
@@ -40,6 +41,7 @@ export default function AuthProvider({ children }) {
     // p.s. this feels even easier than RainbowKit, eh?
     const logIn = () => {
       fcl.logIn();
+      // console.log(fcl.account().then(res => res.name))
     };
   
     // Use the `checkIsInitialized` script we wrote earlier

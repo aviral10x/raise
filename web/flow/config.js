@@ -17,4 +17,6 @@ config({
   "0xNonFungibleToken": "0x631e88ae7f1d7c20",
   "0xFungibleToken": "0x9a0766d93b6608b7",
   "0xFLOW": "0x7e60df042a9c0868",
+  "0xFlowns": "0xb05b2abb42335e88",
+
 });

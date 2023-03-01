@@ -1,85 +1,49 @@
 ### 👋 Welcome to Raise!
 Raise is a platform to Support Public Goods and Open Source Projects in the Flow Ecosystem.
 
-### 🔨 Getting started
-Getting started can feel overwhelming, but we are here for you. Depending on how accustomed you are to Flow here's a list of resources you might find useful:
-- **[Cadence documentation](https://developers.flow.com/cadence/language)**: here you will find language reference for Cadence, which will be the language in which you develop your smart contracts,
-- **[Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432)** and **[Cadence extension](https://marketplace.visualstudio.com/items?itemName=onflow.cadence)**: we suggest using Visual Studio Code IDE for writing Cadence with the Cadence extension installed, that will give you nice syntax highlitning and additional smart features,
-- **[SDKs](https://developers.flow.com/tools#sdks)**: here you will find a list of SDKs you can use to ease the interaction with Flow network (sending transactions, fetching accounts etc),
-- **[Tools](https://developers.flow.com/tools#development-tools)**: development tools you can use to make your development easier, [Flowser](https://docs.flowser.dev/) can be super handy to see what's going on the blockchain while you develop
+###  SThe problem Raise solves
+
+- Generally, many innovative and creative projects with highly efficient ideas and structures fail to succeed and expand as their growth stops due to insufficient funds and resources. We have brought up a solution in the most efficient and Advanced Manner
+- Any Project/ Startup in need of funds and investment can easily list their project on our platform. We provide public exposure to those projects listed in our application.
+- General People can easily visit our website to check all the listed projects and fund any project with any amount of their choice, helping those projects receive Crowd Funding.
+- We will be partnering with other major companies to create a pool of funds which will later be used to convert the crowdfunding into Quadratic Funding.
+- This will help the projects gain up to 100 times more funds than they’ll be receiving from normal crowdfunding.
+- This will provide them with enough Funds to Grow and Prosper in the Web 3.0 Ecosystem and will also receive public exposure and reviews which will help toh to contribute more and improve themselves.
+- This will be required to expand the ecosystem of web 3.0, as approx 90% of companies \ Projects Fail due to a lack of funds in the market.
+- Our Platform will help all of those to Raise Funds from the services that our platform provides for them.
 
 
-### 📦 Project Structure
-Your project comes with some standard folders which have a special purpose:
-- `/cadence` inside here is where your Cadence smart contracts code lives
-- `flow.json` configuration file for your project, you can think of it as package.json, but you don't need to worry, flow dev command will configure it for you
+###  Challenges we ran into
 
-Inside `cadence` folder you will find:
-- `/contracts` location for Cadence contracts go in this folder
-- `/scripts` location for Cadence scripts goes here
-- `/transactions` location for Cadence transactions goes in this folder
-- `/tests` all the integration tests for your dapp and Cadence tests go into this folder
+- We ran into quite a lot of challenges starting off with the Front end, we faced several issues while making the front end durable to our backend thing took quite a lot of time to figure out and turn things out correctly.
+- While making the smart contract in cadence we ran into a lot of challenges again. Things became too complicated and we faced many major errors which took more than two days to resolve. We took many headaches while designing our need's smart contracts.
+- Then we faced a series of issues and errors while making the backend and making it meet the requirement of the contracts.
+- It took a lot of research and resources to solve those.
+- After that when we came to Integrating everything it took Two to three days to get everything in line and working with absolutely no errors and everything worked just as per planned.
+- It took days and nights of hard work to make us this project we’ve gone through multiple sleepless nights, just working through this project to give it all we had and here we are Full and Finally complete for submission.
 
-
-### 👨‍💻 Start Developing
-After creating this project using the flow setup command you should then start the emulator by running:
-```
-> flow emulator --contracts
-```
-_we use `--contracts` flag to include more already deployed contract we can then easily import in our project._
-
-and then start the development command by running:
-```shell
-> flow dev
-```
-After the command is started it will automatically watch any changes you make to Cadence files and make sure to continiously sync those changes on the emulator network. If you make any mistakes it will report the errors as well. Read more [about the command here](https://developers.flow.com/tools/flow-cli/super-commands)
-
-**Importing Contracts**
-
-When you want to import the contracts you've just created you can simply do so by writing the import statement:
-```
-import "Foo"
-```
-We will automatically find your project contract named `Foo` and handle the importing for you. 
-
-**Deploying to specific accounts**
-
-By default all contracts are deployed to a default account. If you want to seperate contracts to different accounts you can easily do so by creating a folder inside the contracts folder and we will create the account for you which will have the same name as the folder you just created. All the contracts inside that folder will be deployed automatically to the newly created account.
-
-Example deploying to charlie account:
-
-_folder structure_
-```
-/contracts
-    Bar.cdc
-    /charlie
-        Foo.cdc
-```
-
-You can then import the `Foo` contract in `Bar` contract the same way as any other contract:
-```
-import "Foo"
-```
-
-**Included Imports**
-
-You can already import certain common contracts we included for you, just make sure you started your emulator with the `--contracts` flag so those contracts are really deployed. The list of contracts you can import out of the box is:
-- NonFungibleToken `import "NonFungibleToken"`
-- FlowToken `import "FlowToken"`
-- FungibleToken `import "FungibleToken"`
-- FUSD `import "FUSD"`
-- MetadataViews `import "MetadataViews"`
-- ExampleNFT `import "ExampleNFT"`
-- NFTStorefrontV2 `import "NFTStorefrontV2"`
-- NFTStorefront `import "NFTStorefront"`
 
 ### Sponsor tracks and prizes
+
 **Extending the Ecosystem**
+
+Raise can support public goods and open-source projects on the Flow ecosystem.
+This would help existing and trending projects in the ecosystem like Flovatar, IncrementFi, and NBA TopShot to raise funds for their projects thus extending the Flow ecosystem to the next million users.
+Also, DeFi protocols can also set up bug bounty programs in the upcoming features of our platform.
+
 **Best app building on FlowNS**
+
+We've used FlowNS script to showcase the FlowNS Domain names owned by the users and the creator of the grant.
+- GitHub Code for FlowNS Integration -  - https://github.com/aviral10x/raise/blob/main/web/flow/scripts.js
+
+
 **Best Use Of Walletless Onboarding Track**
+We've used Niftory's Wallet API to help onboard tons of users from the Web2 space and allow them to fund grants in our platform and also to create grants and get their projects funded.
+
+
 **Best app using Niftory's NFT and Wallet APIs**
 
 
 - Best app using Niftory's NFT and Wallet APIs - https://github.com/aviral10x/raise/tree/main/niftory
-- Best app building on FlowNS - https://github.com/aviral10x/raise/blob/main/web/flow/scripts.js
+- Best app building on FlowNS
 

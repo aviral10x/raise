@@ -169,7 +169,7 @@ export default function Purchase() {
             className="px-4 h-8  rounded-lg  bg-gray-800 text-gray-400 "
               type="text"
               value={name}
-              placeholder="  Learn web 3"
+              placeholder="Grant Name"
               onChange={(e) => setName(e.target.value)}
             /></div>
             {/* <span>.fns</span> */}

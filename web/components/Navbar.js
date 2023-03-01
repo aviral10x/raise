@@ -62,7 +62,7 @@ export default function Navbar() {
       {/* <div className=' mx-2 my-2 '> */}
       <div className='hover:text-white delay-50  text-md font-semibold bg-green-400 text-black rounded-lg px-3 font-mono' >
       <button>
-   <a href="https://raise-web.vercel.app/">Login with Niftory</a>
+   <a href="https://raise-niftory.vercel.app/">Login with Niftory</a>
        
       </button></div>
 <div className='hover:text-white delay-50  text-md font-semibold bg-green-400 text-black rounded-lg px-3 font-mono' >

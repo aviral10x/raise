@@ -129,7 +129,10 @@ height="400"/>
                 {di.name}
                 </h5>
                 <p className="mb-1 text-base text-neutral-600 dark:text-neutral-100">
-                  By {di.owner}
+                  <p className="text-red-100" onMouseEnter={ async ()=>{ 
+const name = await getFlownsName(di.owner);
+setName(name);
+                  }} >By {name}</p>
                 </p>
                 <p className="mb-4 text-base text-neutral-600 dark:text-neutral-100">
                   {di.bio.slice(0,64)}...
@@ -150,7 +153,7 @@ height="400"/>
                   }} >Fund </button> */}
 
               </div>
-              <button onClick={getFlowns}>check</button>
+              {/* <button onClick={getFlowns}>check</button> */}
 
             </div>
         

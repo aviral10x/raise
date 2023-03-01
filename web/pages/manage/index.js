@@ -76,8 +76,8 @@ setName(name);
       </Head>
 
       <Navbar />
-      <button onClick={fetchBalance}>FetchBalance{bal ? bal :"bal"}</button>
-      <button onClick={fetchName}>FetchName{name ? name :"name"}</button>
+
+      
 
       <main className={styles.main}>
 
@@ -100,10 +100,16 @@ setName(name);
       <div className='mx-4 my-4 text-2xl text-white font-semibold font-mono'>
             
               <p>You have not registered any FNS Grants yet</p></div>
-            ) : (
 
+            ) : (
+<>
+       <button onClick={fetchBalance}>FetchBalance - {bal ? bal :""}</button>
+            
+            
+              <button onClick={fetchName}>FetchName - {name ? name :""}</button>
               
               <div className="grid grid-cols-4 gap-8" >
+                
              { grantInfos.map((di, idx) => (
                 <Link href={`/manage/${di.nameHash}`}>
              
@@ -148,6 +154,8 @@ setName(name);
                 </Link>
               ))}
          </div>
+</>
+          
             )}
           </div>
         )}

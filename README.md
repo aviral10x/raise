@@ -25,24 +25,24 @@ Raise is a platform to Support Public Goods and Open Source Projects in the Flow
 
 ### Sponsor tracks and prizes
 
-** - Extending the Ecosystem**
+**Extending the Ecosystem**
 
 Raise can support public goods and open-source projects on the Flow ecosystem.
 This would help existing and trending projects in the ecosystem like Flovatar, IncrementFi, and NBA TopShot to raise funds for their projects thus extending the Flow ecosystem to the next million users.
 Also, DeFi protocols can also set up bug bounty programs in the upcoming features of our platform.
 
-** - Best app building on FlowNS**
+**Best app building on FlowNS**
 
 We've used FlowNS script to showcase the FlowNS Domain names owned by the users and the creator of the grant.
 - GitHub Code for FlowNS Integration -  - https://github.com/aviral10x/raise/blob/main/web/flow/scripts.js
 
 
-** - Best Use Of Walletless Onboarding Track**
+**Best Use Of Walletless Onboarding Track**
 
 We've used Niftory's Wallet API to help onboard tons of users from the Web2 space and allow them to fund grants in our platform and also to create grants and get their projects funded.
 
 
-** - Best app using Niftory's NFT and Wallet APIs**
+**Best app using Niftory's NFT and Wallet APIs**
 
 
 - Best app using Niftory's NFT and Wallet APIs - https://github.com/aviral10x/raise/tree/main/niftory

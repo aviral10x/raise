@@ -47,3 +47,9 @@ We've used Niftory's Wallet API to help onboard tons of users from the Web2 spac
 
 - Best app using Niftory's NFT and Wallet APIs - https://github.com/aviral10x/raise/tree/main/niftory
 
+### Important Links
+
+- Web App - https://raise-web.vercel.app/
+- Landing Page - https://raise-3.vercel.app/
+- Presentation Slides - https://pitch.com/public/6cb7367b-cbb2-4b45-abc8-b00e98d46b03
+
